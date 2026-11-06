@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-left-sidebar-pro",
+    "description": "左侧栏重排：新建对话 + More 分组（技能 / 插件 / 自动化任务 / MCP / 已归档）+ 置顶区；带展开收起动画、对话状态点、行内归档按钮，并提供「MCP 服务器」「已归档对话」「Skill 管理」三个整页界面（Sidebar layout: New Chat plus a collapsible More group, a Top section, fold animations, session status dots, an inline archive button, and three full-page panels — MCP servers, Archived conversations and Skill management）。"
+  }
+}

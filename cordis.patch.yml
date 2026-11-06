@@ -1,0 +1,25 @@
+# 把本插件插入 profile 的插件树。
+#
+# 本插件有两半：
+#   - Host 半（index.js）：通过 DSH 自带的 Web 服务器注册几个小接口，
+#     用来读写 profile 补丁文件里「MCP 服务器」那一段配置；
+#     同一半里的 archived-host.js 负责「已归档对话」（列表 / 正文 / 删除），
+#     skill-host.js 负责「Skill 管理」（列表 / 正文 / 停用启用 / 定位）。
+#   - Client 半（client.js）：重排左侧栏（新建对话 + More 分组 + Top 置顶区），
+#     并提供「MCP 服务器」「已归档对话」「Skill 管理」三个整页界面。
+#
+# config 是整体替换、不是深合并；想改哪个字段就把整段写全。
+- insert:
+    - id: sidebar-pro
+      name: '@local/dsh-left-sidebar-pro'
+      config:
+        # 「已归档对话」那一段的参数。
+        # 只写一部分的话，没写的那些会用代码里的默认值补上，不会丢。
+        archived:
+          # 「确认删除」之后先只做标记（把那一行划掉），保留这么多天才真正删文件。
+          # 想让它立刻删就把这里改成 0（下次检查时删除，最多等 10 分钟）。
+          retentionDays: 3
+          # 每隔多少分钟检查一次有没有到期的，默认 10 分钟。
+          sweepMinutes: 10
+          # 小账本（记录哪些被标记待删除）默认放在 ~/.dsh/archived-panel/trash.json；
+          # 想换地方就自己加一行 statePath: /绝对/路径.json

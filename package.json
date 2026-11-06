@@ -1,0 +1,41 @@
+{
+  "name": "@local/dsh-left-sidebar-pro",
+  "version": "1.0.0",
+  "description": "dsh-left-sidebar-pro：左侧栏重排（新建对话 + More 分组 + 置顶区），带展开收起动画、对话状态点、行内归档按钮，并提供「MCP 服务器」「已归档对话」「Skill 管理」三个整页界面。",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "README.md",
+    "index.js",
+    "archived-host.js",
+    "skill-host.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/en.json",
+    "locale/zh.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
