@@ -2,6 +2,7 @@
   "name": "@local/dsh-left-sidebar-pro",
   "version": "1.0.0",
   "description": "dsh-left-sidebar-pro：左侧栏重排（新建对话 + More 分组 + 置顶区），带展开收起动画、对话状态点、行内归档按钮，并提供「MCP 服务器」「已归档对话」「Skill 管理」三个整页界面。",
+  "license": "MIT",
   "type": "module",
   "publishConfig": {
     "access": "public"
@@ -16,6 +17,7 @@
   },
   "files": [
     "README.md",
+    "LICENSE",
     "index.js",
     "archived-host.js",
     "skill-host.js",
