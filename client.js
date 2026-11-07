@@ -28,7 +28,7 @@
  */
 
 window.__ModuleLoader__.load({
-  id: '@local/dsh-left-sidebar-pro',
+  id: '@uexx/dsh-left-sidebar-pro',
   factory(require) {
     var module = { exports: {} }
     var exports = module.exports
@@ -6178,8 +6178,8 @@ window.__ModuleLoader__.load({
         var style = document.createElement('style')
         // data-plugin 是 DSH 模块系统的「所有权标记」。少了它，这张样式表会被当成
         // 无主的，记到下一个加载的插件名下，并在那个插件重载时被一起删掉。
-        style.setAttribute('data-plugin', '@local/dsh-left-sidebar-pro')
-        style.setAttribute('data-dsh-plugin', '@local/dsh-left-sidebar-pro')
+        style.setAttribute('data-plugin', '@uexx/dsh-left-sidebar-pro')
+        style.setAttribute('data-dsh-plugin', '@uexx/dsh-left-sidebar-pro')
         style.textContent = CSS
         document.head.appendChild(style)
         return function () {
@@ -7328,8 +7328,8 @@ window.__ModuleLoader__.load({
         var style = document.createElement('style')
         // data-plugin 是 DSH 模块系统的「所有权标记」。少了它，这张样式表会被当成
         // 无主的，记到下一个加载的插件名下，并在那个插件重载时被一起删掉。
-        style.setAttribute('data-plugin', '@local/dsh-left-sidebar-pro')
-        style.setAttribute('data-dsh-plugin', '@local/dsh-left-sidebar-pro')
+        style.setAttribute('data-plugin', '@uexx/dsh-left-sidebar-pro')
+        style.setAttribute('data-dsh-plugin', '@uexx/dsh-left-sidebar-pro')
         style.textContent = CSS
         document.head.appendChild(style)
         return function () { style.remove() }

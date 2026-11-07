@@ -58,7 +58,7 @@
  *     2. 写入前先检查「标记之外的内容」有没有被动过，动过就拒绝写入并报错；
  *     3. 用「先写临时文件、再改名」的方式落盘，避免写一半断电留下半个文件。
  *
- * @module @local/dsh-left-sidebar-pro
+ * @module @uexx/dsh-left-sidebar-pro
  */
 
 import { copyFileSync, existsSync, readFileSync, renameSync, writeFileSync } from 'node:fs'

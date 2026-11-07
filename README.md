@@ -88,7 +88,7 @@ dsh plugin --profile <profile> add <包名或本目录的绝对路径>
 例如：
 
 ```sh
-dsh plugin --profile desktop add @your-scope/dsh-left-sidebar-pro
+dsh plugin --profile desktop add @uexx/dsh-left-sidebar-pro
 ```
 
 包名以 `package.json` 的 `name` 字段为准。

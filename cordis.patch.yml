@@ -11,7 +11,7 @@
 # config 是整体替换、不是深合并；想改哪个字段就把整段写全。
 - insert:
     - id: sidebar-pro
-      name: '@local/dsh-left-sidebar-pro'
+      name: '@uexx/dsh-left-sidebar-pro'
       config:
         # 「已归档对话」那一段的参数。
         # 只写一部分的话，没写的那些会用代码里的默认值补上，不会丢。
